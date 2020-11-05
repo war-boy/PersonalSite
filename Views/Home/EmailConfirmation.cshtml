@@ -1,0 +1,14 @@
+﻿@model PersonalSiteMVC.Models.ContactViewModel
+
+@{
+    ViewBag.Title = "Your Email Was Succesfully Sent";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>We successfully received the following message:</h3>
+<p>Name: @Model.Name</p>
+<p>Email: @Model.Email</p>
+<p>Subject: @Model.Subject</p>
+<p>Message: @Model.Message</p>
+<h3>I will respond back as soon as possible to <strong>@Model.Email@(".")</strong> Thank you for contacting me!</h3>

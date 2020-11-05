@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of personal projects" />
+    <meta name="keywords" content="portfolio, projects, examples" />
+    <meta name="author" content="Ryan Eutsler" />
+
+    <!--Bootstrap-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!--Template CSS-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--Custom CSS-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="is-preload projectsBody">
+    <div id="side-btn" class="openbutton" onclick="openSideNav()">
+        <span class="vertical-text glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div id="side-nav" class="sidenav">
+        <header id="header">
+            <div class="inner">
+                <div>
+                    <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
+                    <a class="image avatar"><img src="images/ryanheadshot.JPG" /></a>
+                    <h1>
+                        I'm <strong>Ryan Eutsler</strong>, a passion driven<br />
+                        Full-Stack web developer in Kansas City, MO.<br />
+                    </h1>
+
+                    <a href="index.html">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="links.html">Links</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <div>
+
+    </div>
+    <div id="main">
+        <section id="two">
+            <h1>Portfolio</h1>
+            <h2 id="fsProjects">Full Stack Web Applications</h2>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+                    <h3>Studio Project</h3>
+                    <p>A website I developed based off of a wireframe I did not create. This project was done as a testimonal to my ability to create dynamic websites based on a clients requirements.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+                    <h3>JavaScript Functions</h3>
+                    <p>A showcase of an assortment of custom made JavaScript functions. Functions include a temperature converter change calculator and others. </p>
+                </article>
+            </div>
+            <h2 id="jsProjects">JavaScript (Front-end) Projects</h2>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+                    <h3>Studio Project</h3>
+                    <p>A website I developed based off of a wireframe I did not create. This project was done as a testimonal to my ability to create dynamic websites based on a clients requirements.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+                    <h3>JavaScript Functions</h3>
+                    <p>A showcase of an assortment of custom made JavaScript functions. Functions include a temperature converter change calculator and others. </p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+                    <h3>JavaScript project #n</h3>
+                    <p>Work in progress</p>
+                </article>
+            </div>
+            <h2 id="cProjects">C# Projects</h2>
+            <div class="row">
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+                    <h3>Dungeon</h3>
+                    <p>A text based dungeon crawling made to demostrate my ability to create custom objects and methods in the .net framework as well as a many of my other c# skills.</p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+                    <h3>C# Showcase</h3>
+                    <p>A collection of C# applications to showcase my basic middle teir development skills. Applications include an ATM interface, FizzBuzz, Fibonnaci Sequence and others.  </p>
+                </article>
+                <article class="col-6 col-12-xsmall work-item">
+                    <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+                    <h3>C# project #n</h3>
+                    <p>Work in progress</p>
+                </article>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ryan Eutsler 2020</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openSideNav() {
+            document.getElementById('side-btn').style.diplay = "none";
+            document.getElementById('side-nav').style.width = "30%";
+        }
+
+        function closeSideNav() {
+            document.getElementById('side-btn').style.diplay = "block";
+            document.getElementById('side-nav').style.width = "0";
+            //Hides the nav bar by returning it to it's original width and display
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Useful Links</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Usefule external resources" />
+    <meta name="keywords" content="resources, links" />
+    <meta name="author" content="Ryan Eutsler" />
+
+    <!--Bootstrap-->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!--Template CSS-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--Custom CSS-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="is-preload">
+    <div id="side-btn" class="openbutton" onclick="openSideNav()">
+        <span class="vertical-text glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div id="side-nav" class="sidenav">
+        <header id="header">
+            <div class="inner">
+                <div>
+                    <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
+                    <a class="image avatar"><img src="images/ryanheadshot.JPG" /></a>
+                    <h1>
+                        I'm <strong>Ryan Eutsler</strong>, a passion driven<br />
+                        Full-Stack web developer in Kansas City, MO.<br />
+                    </h1>
+
+                    <a href="index.html">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="links.html">Links</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <div>
+
+    </div>
+    <div id="main">
+        <section id="one">
+            <section class="major">
+                <h1 style="color: black;">External Resources</h1>
+                <p><em>Below is a collection of websites, applications and people who have helped me get to where I am now, and continue to help me troubleshoot problems and grow my knowledge.</em></p>
+            </section>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/default.asp">W3 Schools - HTML</a></li>
+                <li><a href="https://www.w3schools.com/css/default.asp">W3 Schools - CSS</a></li>
+                <li><a href="https://color.adobe.com/create/color-wheel">Adobe Color</a></li>
+                <li><a href="https://javascript.info/">JavaScript Tutorial</a></li>
+                <li>Work in progress</li>
+            </ul>
+            <section class="major">
+                <h2 style="color: black;">
+                    Classmates
+                </h2>
+                <p>
+                    Coming soon
+                </p>
+            </section>
+
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Ryan Eutsler 2020</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openSideNav() {
+            document.getElementById('side-btn').style.diplay = "none";
+            document.getElementById('side-nav').style.width = "30%";
+        }
+
+        function closeSideNav() {
+            document.getElementById('side-btn').style.diplay = "block";
+            document.getElementById('side-nav').style.width = "0";
+            //Hides the nav bar by returning it to it's original width and display
+        }
+    </script>
+
+</body>
+</html>
