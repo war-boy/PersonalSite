@@ -1,0 +1,138 @@
+﻿/*Please note this CSS contains code wrote by Ryan Eutsler*/
+
+/*General*/
+strong {
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1em;
+    margin-top: -0.8em;
+    line-height: 1.5em;
+}
+
+.sidenav {
+    height: 100%;
+    width: 27%;
+    position: fixed;
+    z-index: 1030;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-x: hidden;
+    padding-top: 100px;
+    transition: .5s;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-align-items: -moz-flex-end;
+    -webkit-align-items: -webkit-flex-end;
+    -ms-align-items: -ms-flex-end;
+    align-items: flex-end;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    background-color: #1f1815;
+    background-attachment: scroll, scroll;
+    background-image: url("../../assets/css/images/overlay.png"), url("../images/bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 150%;
+    color: rgba(255, 255, 255, 0.5);
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+    .sidenav a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: .5s;
+    }
+
+.inner {
+    padding-right: 0.5em;
+    padding-left: 1em;
+}
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
+}
+
+.openbutton {
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 20px;
+    z-index: 1030;
+    position: fixed;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.vertical-text {
+    position: fixed;
+    top: 45%; /*will kinda be in the middle when it's sideways*/
+    writing-mode: vertical-lr; /*will read vertical left to right*/
+    color: #000;
+    font-weight: bold;
+}
+
+#maincontent {
+    padding: 5px;
+    margin-left: 29%;
+    margin-right: 3%;
+    display: inline-block;
+    width: auto;
+    transition: .5s;
+}
+
+#contactlabel {
+    padding-right: 60px;
+}
+
+ul.actions li a {
+    display: inline-block;
+}
+
+
+
+a.selected {
+    color: #49bf9d !important;
+}
+
+
+/*Portfolio*/
+article.work-item h3 {
+    display: inline-block;
+}
+
+    article.work-item h3.tech-stack {
+        float: right;
+    }
+
+img.project-thumb {
+    height: 362px;
+    width: 622px;
+}
+
+/*So thumbnail images in Index.cshtml will display View instead of Demo*/
+.image.index-thumb:after {
+    content: 'View';
+}
+
+/*Resume*/
+div.resume-container{
+    margin-left: 30%;
+    width: 100%;
+}

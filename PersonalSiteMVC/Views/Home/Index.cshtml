@@ -1,0 +1,121 @@
+﻿@model PersonalSiteMVC.Models.ContactViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<hr />
+<section id="one">
+    <h1>@ViewBag.Title</h1>
+
+    <header class="major">
+        <h3>
+            About Me
+        </h3>
+        <p>
+            After obtaining a <strong>Bachelor’s Degree</strong> in Exercise Movement Science from Missouri State University in 2018, I moved to Kansas City, seeking a calling in life. I eventually started a career in <strong>Application and Data Management recruitment</strong>, where I spoke to developers across the nation about their skills and experience, worked with hiring managers to qualify their positions, and received technical training to better qualify and source for those roles.
+        </p>
+        <p>
+            I quickly became obsessed with software development and was instantly drawn to the vast amount of technical knowledge there was to be gained. I began to study <strong>Object Oriented Programming</strong> in popular languages in my free time. I soon learned my analytical thinking skills, attention to detail and problem-solving attitude would all benefit me stepping into a new career.
+            Centriq has helped me take the first steps in my journey with software development, by helping me grow my full stack skills, with technologies including (but not limited to) <strong>C#, JavaScript, SQL, MVC, ADO.NET and React.js</strong>.
+        </p>
+        <p>
+            After completing the 6-month, quick paced program on <strong>December 10th, 2020</strong>; I am now well prepared and extremely eager to join your team or your client’s team! I hope to bring my knowledge, technical skills, open-mindedness and positivity to your company and its software!
+        </p>
+
+    </header>
+
+</section>
+
+<hr />
+
+<!-- Two -->
+<section id="two">
+    <h1>Recent Work</h1>
+    <div class="row">
+
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="@Url.Action("Projects","Home")" class="image fit thumb index-thumb"><img src="~/Content/assets/images/job_board_.jpg" alt="Final Project" height="362" width="622" /></a>
+            <h3><strong>Job Board</strong></h3>
+            <p></p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="@Url.Action("Projects","Home")" class="image fit thumb index-thumb"><img src="~/Content/assets/images/thumbs/storefront_thumb.jpg" alt="Storefront" height="362" width="622" /></a>
+            <h3><strong>Storefront Project</strong></h3>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="@Url.Action("Projects","Home")" class="image fit thumb index-thumb"><img src="~/Content/assets/images/erichs_carpet_care.JPG" alt="Erich's Carpet Care" class="project-thumb" /></a>
+            <h3><strong>Erich's Carpet Care</strong></h3>
+            <p></p>
+        </article>
+
+        <article class="col-6 col-12-xsmall work-item">
+            <a href="@Url.Action("Projects","Home")" class="image fit thumb index-thumb"><img src="~/Content/assets/images/dungeon_.JPG" alt="Dungeon Application" class="project-thumb" /></a>
+            <h3><strong>Dungeon Application</strong></h3>
+        </article>
+    </div>
+    <ul class="actions">
+        <li><a href="@Url.Action("Projects","Home")" class="button">Full Portfolio</a></li>
+    </ul>
+</section>
+
+<hr />
+
+<section id="three">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h2 id="contact">Get In Touch</h2>
+        <p>Please contact me in regards to all relevant contract, part-time and full time positions. I aim to respond to all inquiries within 24 hours. </p>
+        <div class="row">
+            <div class="col-8 col-12-small">
+                <form method="post" action="#">
+                    <div class="row gtr-uniform gtr-50">
+                        <div class="col-6 col-12-xsmall">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Name" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-12">
+                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control", placeholder = "Subject" } })
+                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-12">
+                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", placeholder = "Message", rows = "4" } })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" /></li>
+                </ul>
+            </div>
+            <div class="col-4 col-12-small">
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon solid fa-home"><span class="label">Location</span></h3>
+                        Kansas City, MO
+                    </li>
+                    <li>
+                        <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                        <a href="#">ryan.eutsler@outlook.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+    @if (ViewBag.CustomerMessage != null)
+    {
+        <h4>@Html.Raw(ViewBag.CustomerMessage)</h4>
+    }
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

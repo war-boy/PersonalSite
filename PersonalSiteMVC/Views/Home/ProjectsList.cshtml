@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PersonalSiteMVC.Models.ProjectViewModel>
+
+@{
+    ViewBag.Title = "ProjectsList";
+}
+
+<h2>ProjectsList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<section id="two">
+    <h1>@ViewBag.Title</h1>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <article class="col-4-medium col-12-xsmall work-item">
+                <a href="@item.URL" class="image fit thumb"><img src="@item.ProjectImage" alt="@Html.DisplayFor(modelItem => item.ProjectName)" /></a>
+                <h3>@Html.DisplayFor(modelItem => item.ProjectName): @Html.DisplayFor(modelItem => item.Category)</h3>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                <div class="row" style="padding-left: 1.6em;">
+                    <ul class="actions col-1-large">
+                        <li><a href="@item.URL" class="btn">Demo</a></li>
+                    </ul>
+                    <ul class="actions col-1-large">
+                        <li><a href="@item.GitHub" class="btn">GitHub</a></li>
+                    </ul>
+                </div>
+            </article>
+        }
+    </div>
+</section>
+
+
+
